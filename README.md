@@ -30,7 +30,13 @@ Trainer 1 ─── N Pokemon
 
 | 기능 | 메서드 | URI | 요청 DTO | 응답 DTO | 상태 코드 |
 |---|---|---|---|---|---|
-| 포켓몬 등록 | POST | `/api/pokemon` | `PokemonRequestDto` | `PokemonResponseDto` | `200 OK` |
+| 포켓몬 등록 | POST | `/api/pokemon` | ````json
+{
+  "trainerName": "유기현",
+  "gender": "남성",
+  "age": 22
+}
+```` | `PokemonResponseDto` | `200 OK` |
 | 포켓몬 단건 조회 | GET | `/api/pokemon/{id}` | 없음 | `PokemonSearchResponseDto` | `200 OK` |
 | 포켓몬 전체 조회 | GET | `/api/pokemon` | 없음 | `List<PokemonSearchResponseDto>` | `200 OK` |
 | 포켓몬 삭제 | DELETE | `/api/pokemon/{id}` | 없음 | 없음 또는 문자열 | `200 OK` |
